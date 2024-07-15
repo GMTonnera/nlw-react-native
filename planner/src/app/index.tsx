@@ -222,7 +222,7 @@ export default function Index() {
           <>
             <View className="border-b py-3 border-zinc-800">
               <Button
-                variant="secundary"
+                variant="secondary"
                 onPress={() => setStepForm(StepForm.TRIP_DETAILS)}
               >
                 <Button.Title>Alterar local/data</Button.Title>

@@ -10,7 +10,7 @@ import { useContext, createContext } from "react";
 
 import { clsx } from "clsx";
 
-type Variants = "primary" | "secundary";
+type Variants = "primary" | "secondary";
 
 type ButtonProps = TouchableOpacityProps & {
   variant?: Variants;
@@ -29,10 +29,10 @@ function Button({
   return (
     <TouchableOpacity
       className={clsx(
-        "h-11 flex-row items-center justify-center rounded-lg gap-2",
+        "h-11 flex-row items-center justify-center rounded-lg gap-2 px-2",
         {
           "bg-lime-300": variant === "primary",
-          "bg-zinc-800": variant === "secundary",
+          "bg-zinc-800": variant === "secondary",
         },
         className
       )}
@@ -54,7 +54,7 @@ function Title({ children }: TextProps) {
     <Text
       className={clsx("text-base font-semibold", {
         "text-lime-950": variant === "primary",
-        "text-zinc-200": variant === "secundary",
+        "text-zinc-200": variant === "secondary",
       })}
     >
       {children}
